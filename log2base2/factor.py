@@ -6,11 +6,11 @@ factor of the first and "No" otherwise
 
 def factor(num1: int, num2: int):
     """
-    return "Yes" if num2 is a factor num1 else "No"
+    return true if num2 is a factor num1 else false
     :param num1: int first number
     :param num2: int second number
     :return: string result of the test
     """
-    return "Yes" if num1 % num2 == 0 else "No"
+    return True if num1 % num2 == 0 else False
 
-print(factor(10, 5))
+factor2 = lambda x, y: x % y == 0
