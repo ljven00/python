@@ -11,4 +11,4 @@ def reverse_num(n: int):
     temp = reversed(list(str(n)))
     return int("".join(temp))
 
-print(reverse_num(300))
+# print(reverse_num(300))
