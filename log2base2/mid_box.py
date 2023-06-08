@@ -16,4 +16,4 @@ def mid_box(n: int):
         print("")
 
 
-mid_box(5)
+# mid_box(5)
