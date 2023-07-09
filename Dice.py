@@ -1,8 +1,7 @@
-# this program simulates two rolling dice
+""" this program simulates two rolling dice"""
 
 from random import randint
 from time import sleep
-
 
 class Dice:
 
@@ -11,19 +10,15 @@ class Dice:
 
     # text representation of a die
     __dice = ["\n  *\n",
-                "*\n\n\t*",
-                "*\n  *\n\t*",
-                "*   *\n\n*   *",
-                "*   *\n  *\n*   *",
-                "*   *\n*   *\n*   *"
-              ]
+        "*\n\n    *",
+        "*\n  *\n    *",
+        "*   *\n\n*   *",
+        "*   *\n  *\n*   *",
+        "*   *\n*   *\n*   *"
+    ]
 
     def __init__(self, name = "User"):
-        self.__die1 = randint(Dice.__MIN, Dice.__MAX)
-        self.__die2 = randint(Dice.__MIN, Dice.__MAX)
-        self.__roll_sum = self.__die1 + self.__die2
-        self.__die1_graph = Dice.__dice[self.__die1 - 1]
-        self.__die2_graph = Dice.__dice[self.__die2 - 1]
+        self.roll()
         self.__user_score = 0
         self.__roll_count = 0
         self.__username = name
@@ -62,7 +57,7 @@ class Dice:
     def __goodbye(self):
         print(f"You are leaving so soon {self.__username}...")
         sleep(1)
-        print("Thank  you for playing...")
+        print("Thank you for playing...")
         sleep(1)
         print(f"Out of {self.__roll_count} rolls, you won {self.__user_score}.")
         print("See you soon!")
