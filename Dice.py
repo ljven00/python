@@ -60,8 +60,8 @@ class Dice:
         sleep(1)
         print("Thank you for playing...")
         sleep(1)
-        print(f"Out of {self.__roll_count} rolls, you won \
-            {self.__user_score} Home won {self.__home_score}")
+        print(f"Out of {self.__roll_count} rolls, you won {self.__user_score}")
+        print(f"Home won {self.__home_score}")
         winner = self.__username if self.__user_score > self.__home_score \
             else "Home" if self.__home_score > self.__user_score \
             else "No winner"
@@ -88,6 +88,6 @@ class Dice:
     def getRollCount(self):
         return self.__roll_count
 
-if __name__ == "main":
-    rolling_dice = Dice()
-    rolling_dice.play()
+#if __name__ == "main":
+rolling_dice = Dice()
+rolling_dice.play()
