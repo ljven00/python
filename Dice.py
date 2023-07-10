@@ -88,6 +88,6 @@ class Dice:
     def getRollCount(self):
         return self.__roll_count
 
-#if __name__ == "main":
-rolling_dice = Dice()
-rolling_dice.play()
+if __name__ == "__main__":
+    rolling_dice = Dice()
+    rolling_dice.play()
