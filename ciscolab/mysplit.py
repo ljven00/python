@@ -12,6 +12,8 @@ def mysplit(string: str, sep = " "):
     """
     word = ""
     string_list = []
+    if string.isspace():
+        return []
     for c in string:
         if c == sep:
             string_list.append(word)
@@ -19,7 +21,6 @@ def mysplit(string: str, sep = " "):
             continue
         word += c
     string_list.append(word)
-    # print(string_list)
     return string_list
 
 
