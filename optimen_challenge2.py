@@ -4,10 +4,11 @@ import sys
 bidgrps = []
 index = -1
 
+
 class BIDGROUP:
     """Holds data with type BIDGROUP"""
-    def __init__(self, temp: list):
-        self.values = temp
+    def __init__(self, data: list):
+        self.values = data
         self.crew_id, self.status, self.stype, \
             self.bid_grp, self.line, self.subline, \
             self.int1, self.str1, *self.remaining = self.values
@@ -33,7 +34,6 @@ class BIDGROUP:
                 temp[4] = str(first_line)
                 self.group[indexes[i]] = ", ".join(temp)
                 first_line += 1
-
 
     def __str__(self):
         self.values[6] = str(self.int1)
@@ -76,44 +76,7 @@ for line in sys.stdin:
             bidgrps[index].add_to_group(new_line)
 
 
-
 print("-" * 10)
 for g in bidgrps:
     g.parse()
     print(g)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def solveMeFirst(a: int, b: int):
-#     """return sum of a in b"""
-#     return a + b
-#
-# def getInput():
-#     """returns two integers in the range 1 - 1000 inclusive"""
-#     while True:
-#         try:
-#             a = int(input("Enter first integer (1 - 1000):"))
-#             b = int(input("Enter second integer (1 - 1000):"))
-#             assert 1 <= a <= 1000 and 1 <= b <= 1000
-#             break
-#         except ValueError:
-#             print("Integer only integer value like 1, 4, 8")
-#         except AssertionError:
-#             print("Value must be in range 1 <= a <= 1000")
-#     return a, b
-#
-# a, b = getInput()
-# res = solveMeFirst(a, b)
-# print(res)
